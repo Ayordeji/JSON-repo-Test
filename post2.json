@@ -1,0 +1,17 @@
+
+// POST REQUEST
+// https://api.staging.kiwibot.com/v1/requesters/{{requester_id}}/deliveries?key={{key}}
+
+{
+    "external_id": "",
+    "quote_id": "5170981c-c75e-4929-9aa2-3f324ea144e6",
+    "delivery_tip": 0,
+    "pickup": {
+        "email": "test@test.com", // Email added in the pickup locations table
+        "instructions": "Sandbox",
+        "name": "" // Name added in the pickup locations table
+    },
+    "webhook_url": "",
+    "test": true,
+    "scheduled": true
+}

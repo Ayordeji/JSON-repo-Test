@@ -1,0 +1,105 @@
+| id | location_name | pick_up_lat | pick_up_lon | pick_up_post_code |
+
+| boscaje | 73.082 | 7.8937 | 110311 |
+
+ANOTHER TABLE
+"To make a relationship with pick up locations"
+id -> Pick up location id 
+id_zone -> Location id (for example: Boscaje, Nigeria, etc)
+pick_up_lat ->  Pick up latitude
+pick_up_lon ->Pick up longitude
+pick_up_post_code -> Pick postal code
+
+
+ANOTHER TABLE
+"To make a relationship with drop off locations"
+
+id -> Drop off location id
+name -> Drop off location name
+id_zone -> Location id (for example: Boscaje, Nigeria, etc)
+drop_off_up_lat ->  Drop off  latitude
+drop_off_lon ->Drop off  longitude
+drop_off_post_code -> Drop off postal code
+
+
+// POST REQUEST
+// https://api.staging.kiwibot.com/v1/requesters/{{requester_id}}/quotes?key={{key}}
+
+// CITY (boscaje, etc)
+  // City name
+  // State
+  // Country
+
+// LOCATION -> CITY
+// DROPOFF LOCATIONS -> In that city
+
+    // City: Boscaje
+        // Cabin 1
+          // street
+          // City
+          // postal code
+          // latitude
+          // longitude
+
+        // Cabin 2
+        // Cabin 3
+
+
+// PICKUP LOCATIONS -> In that city
+  // City: Boscaje
+    // Main Pickup location
+      // Street
+      // City
+      // postal code
+      // longitude
+      // latitude
+      // name: Mc Donalds
+      // email: mcdonalds_boscaje@mcdonalds.com
+
+
+     
+{
+    "pickup": {
+        "street": "Sandbox test pickup",
+        "city": "test",
+        "state": "test",
+        "country": "COL",
+        "email": "", // Email of the user
+        "name": "", // name of the user
+        "phone_number": "", // DON'T WORRY
+        "postal_code": "110311",
+        "instructions": "Use the sandbox",
+        "lon": 33.9723179,
+        "lat": -118.4149706
+    },
+    "dropoff": {
+        "street": "Sandbox test dropoff",
+        "city": "test",
+        "state": "test",
+        "country": "US",
+        "name": "Sandbox test", // name of the user
+        "email": "test@gmail.com", // Email of the user
+        "phone_number": "", // DON'T WORRY
+        "postal_code": "95112",
+        "lon": -118.414044,
+        "lat": 33.971235
+    },
+    "manifest": {
+      "description": "Sandbox test", // Keep this one as it is - DON'T WORRY
+      "value": 0, // Sum of prices of items -- TOTAL OF VALUES
+      "items": [
+        {
+          "name": "Pizza",
+          "value": 5.99,
+          "quantity": 1
+        },
+        {
+          "name": "Cinnamon Roll",
+          "value": 3.99,
+          "quantity": 1
+        }
+      ]
+    },
+    "test": true, // Keep this one as it is
+    "sandbox": true //  Keep this one as it is
+}
